@@ -1,0 +1,30 @@
+package z21;
+import java.util.*;
+
+public class zadanie_2_1 {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Введите, пожалуйста, градусную меру певрого угла");
+        int a = sc.nextInt();
+        System.out.println("Введите, пожалуйста, градусную меру второго угла");
+        int b = sc.nextInt();
+        System.out.println("Введите, пожалуйста, градусную меру третьего угла");
+        int c = sc.nextInt();
+        System.out.println("Сумма введёных градусных мер: " + (a+b+c));
+        if (a > 0 && b > 0 && c > 0) {
+            if (a + b + c == 180) {
+                System.out.println("Треугольник, который вы составили, существует!");
+
+                if (a == 90 || b ==90 || c ==90){
+                    System.out.println("Треугольник, который вы составили, прямугольынй!");
+                }
+            }
+            else {
+                System.out.println("Треугольник, который вы составили, не существует!");
+            }
+        }
+        else{
+            System.out.println("Значения введены неверно");
+        }
+    }
+}
